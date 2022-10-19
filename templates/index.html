@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{%block content %}
+        <h1 class="text-primary">Viagens com Desconto!</h1>
+        <form action="{% url 'consulta' %}", method="post">
+            {% csrf_token%}
+            {{form}}
+            <input type="submit" value="Enviar" class="btn btn-success">
+        </form>
+{% endblock %}
